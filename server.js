@@ -7,7 +7,7 @@ const app = express()
 app.use(express.static(__dirname));
 
 app.get('/image', (req, res) => {
-    fs.readFile('./blackbuck_nored.bmp', (err, data) => {
+    fs.readFile('./img/blackbuck_nored.bmp', (err, data) => {
             if (err) throw err;
             var buffer = Buffer.from(data);
 
