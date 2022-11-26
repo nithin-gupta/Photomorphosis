@@ -6,23 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="eventstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="container">
-        <canvas id="maincanvas" width="500" height="500">
+        <div>
+            <h1>Demo Image</h1>
+            <canvas id="maincanvas" width="500" height="500">
             
-        </canvas>
+            </canvas>
+        </div>
+
         <div class="sideview">
             <h1>Hexdump text</h1>
-            <pre id="hexdump"></pre>
-        </div>
-        <div class="options">
+            <div class="hexdump">
+                <pre id="hexdump"></pre>
+            </div>
 
         </div>
+
     </div>
+    <div class="options">
+        <h1>Options</h1>
+        <div class="sliderpair">
+            <label for="gamma">Gamma</label>
+            <input type="range" name="gamma" id="gamma" min="0" max="8" value="1" step='0.01'>
+            <label for="gamma" id="gammavalue">0</label>
+        </div>
 
+    </div>
     <script src="script.js"></script>
 </body>
 

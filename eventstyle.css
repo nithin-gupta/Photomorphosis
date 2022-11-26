@@ -1,11 +1,34 @@
 .container {
     display: grid;
-    grid-template-columns: 40% 40% 10%;
+    grid-template-columns: auto auto;
     grid-template-rows: auto;
+    height: 70vh;
 }
 
 .sideview {
-    overflow-y: scroll;
-    height: 100vh;
+    height: inherit;
     font-family: 'Inconsolata', monospace;
+}
+
+.hexdump {
+    overflow-y: scroll;
+    height: 60vh;
+    font-size: 20px;
+}
+
+.slider {}
+
+.options {
+    height: 30vh;
+    font-family: 'Inter';
+}
+
+.sliderpair {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+#gammavalue {
+    text-align: center;
 }
