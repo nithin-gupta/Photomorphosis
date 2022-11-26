@@ -24,7 +24,6 @@ function as() {
 
 function drawToCanvas(buffer) {
     createImageBitmap(buffer).then(imageBitmap => {
-        console.log(imageBitmap);
         imgbuffer = imageBitmap;
         ctx.drawImage(imageBitmap, 0, 0)
         const x = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -79,15 +78,12 @@ function setHexDump() {
 function adjustGamma(ctx, gamma) {
     let ginv = 1 / gamma;
     let nimage = getCopyData();
-    console.log("nimage");
-    console.log(nimage);
     let data = nimage.data;
     for (let i = 0; i < data.length; i += 4) {
         nimage.data[i] = 255 * Math.pow((data[i] / 255), ginv);
         nimage.data[i + 1] = 255 * Math.pow((data[i + 1] / 255), ginv);
         nimage.data[i + 2] = 255 * Math.pow((data[i + 2] / 255), ginv);
     }
-    console.log("Isequal: " + JSON.stringify(_.difference(data, nimage.data)))
     ctx.putImageData(nimage, 0, 0)
 }
 
