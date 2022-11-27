@@ -16,7 +16,33 @@
     font-size: 20px;
 }
 
-.slider {}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.hexdumpbut {
+    padding: 10px 15px;
+    background-color: #2050aa;
+    color: white;
+    font-family: Inter;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hexdumpbut:hover {
+    background-color: #154088;
+}
+
+.slider {
+    cursor: pointer;
+}
 
 .options {
     height: 30vh;
@@ -26,9 +52,9 @@
 .sliderpair {
     display: flex;
     flex-direction: column;
-    width: 20vw;
+    width: 30vw;
 }
 
-#gammavalue {
+.slabel {
     text-align: center;
 }
