@@ -48,7 +48,7 @@ double Clamp(double value, double min, double max)
 
 //bmp.GenerateBitmap(@"../img/conv_dec");
 
-var hellobmp = new BitmapInterface.Bitmap(@"../img/img\hi_l.bmp");
+var hellobmp = new BitmapInterface.Bitmap(@"../img/hi_l.bmp");
 Console.WriteLine(hellobmp.DIBColourDepth);
 
 ////var allpixels = data.Zip(hellobmp.GetPixelData(), (n, w)=> new {org = n, hel = w });
